@@ -1,7 +1,7 @@
 <!-- ========================================================
      GITHUB PERSONAL PROFILE README - ANIMATED TOKYO NIGHT THEME
      Customization instructions located in SETUP_GUIDE.md
-     Replace "YOUR_GITHUB_USERNAME" with your actual GitHub username.
+     Replace "leonidas854" with your actual GitHub username.
      ======================================================== -->
 
 <div align="center">
@@ -31,7 +31,7 @@
       <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
     &nbsp;
-    <a href="mailto:tu-correo@example.com">
+    <a href="mailto:tsosachugar@gmail.com">
       <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
     </a>
     &nbsp;
@@ -150,19 +150,19 @@ Hello! I am a **Full Stack Developer & Software Engineer** passionate about desi
 
   <!-- Overall GitHub Stats Card (Tokyo Night Theme) -->
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&icon_color=7dcfff&bg_color=16161e&cache_seconds=1800" alt="GitHub Stats" height="175" />
+    <img src="https://github-readme-stats.vercel.app/api?username=leonidas854&show_icons=true&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&icon_color=7dcfff&bg_color=16161e&cache_seconds=1800" alt="GitHub Stats" height="175" />
   </a>
   &nbsp;
   <!-- Top Languages Card (Tokyo Night Theme) -->
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&bg_color=16161e&langs_count=8&cache_seconds=1800" alt="Top Languages" height="175" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=leonidas854&layout=compact&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&bg_color=16161e&langs_count=8&cache_seconds=1800" alt="Top Languages" height="175" />
   </a>
 
   <br/><br/>
 
   <!-- GitHub Streak Card -->
   <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=tokyonight&hide_border=true&background=16161e&ring=7aa2f7&fire=e0af68&currStreakLabel=7dcfff&sideLabels=c0caf5&dates=565f89" alt="GitHub Streak" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=leonidas854&theme=tokyonight&hide_border=true&background=16161e&ring=7aa2f7&fire=e0af68&currStreakLabel=7dcfff&sideLabels=c0caf5&dates=565f89" alt="GitHub Streak" />
   </a>
 
 </div>
@@ -178,9 +178,9 @@ Hello! I am a **Full Stack Developer & Software Engineer** passionate about desi
 <div align="center">
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake.svg">
-    <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/leonidas854/leonidas854/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/leonidas854/leonidas854/output/github-contribution-grid-snake.svg">
+    <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/leonidas854/leonidas854/output/github-contribution-grid-snake-dark.svg" width="100%">
   </picture>
 
 </div>
@@ -199,7 +199,7 @@ Whether you have a project idea, a job opportunity, technical questions, or simp
     <img src="https://img.shields.io/badge/LinkedIn-Leonidas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
-  <a href="mailto:tu-correo@example.com">
+  <a href="mailto:tsosachugar@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-Message_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   &nbsp;
@@ -220,3 +220,4 @@ Whether you have a project idea, a job opportunity, technical questions, or simp
   <sub>⭐ If you find this profile repository useful or inspiring, feel free to give it a star!</sub>
 
 </div>
+

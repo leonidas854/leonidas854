@@ -106,3 +106,4 @@ En la línea que contiene `readme-typing-svg.demolab.com`, busca el parámetro `
 
 **¿Qué pasa si no tengo commits en repositorios públicos todavía?**
 > Para que tus contribuciones en repositorios privados también se muestren en las estadísticas y en la serpiente, ve a la configuración de tu perfil de GitHub (`Settings` -> `Public profile`), marca la casilla **"Include private contributions on my profile"** y guarda los cambios.
+
