@@ -17,7 +17,10 @@ Perfil: [leonidas854](https://github.com/leonidas854). Página: [Código, galaxi
 | Pausa, movimiento reducido y visibilidad | `src/shared/motion.js` |
 | Conexión entre los componentes | `src/app.js` |
 | Secciones del perfil de GitHub | `src/readme/es/` y `src/readme/en/` |
-| Cabecera e ilustración del README | `assets/header-banner.svg`, `assets/snow-globe.svg` |
+| Cabecera, terminal y frases animadas del README | `src/readme/artwork/*.svg` |
+| Botones de contacto y navegación del README | `src/readme/artwork/buttons.json` |
+| Galaxia y composición de los SVG del README | `scripts/readme/` |
+| Velocidad y versiones estáticas de la serpiente | `scripts/prepare-snake.py` |
 
 Cada componente de contenido tiene su HTML y CSS. Las escenas separan la creación de objetos, la física, el dibujo y los controles. Consulta [las referencias](docs/REFERENCES.md) para ver qué parte del HTML/CSS original se adaptó en cada módulo y [la dirección visual](DESIGN.md) para conservar el estilo aprobado.
 
@@ -52,6 +55,10 @@ El tema es nocturno, como las referencias originales. Con colores forzados se us
 ## README y GitHub Pages
 
 El README usa Markdown e imágenes SVG animadas. La esfera 3D y el lienzo de partículas pertenecen a la página enlazada: GitHub no ejecuta JavaScript de una página dentro del README. [Referencia de GitHub](https://github.com/github/markup).
+
+Los botones, la cabecera, la terminal y el mundo de nieve se generan en `assets/profile/` con `python3 scripts/build-assets.py`. Las curvas reutilizan la geometría Bézier del componente de galaxia; el movimiento del README se expresa con CSS y SVG, sin JavaScript en las imágenes. Edita las fuentes, no las salidas. Los botones tienen enlaces HTML externos para funcionar dentro de GitHub.
+
+La serpiente queda siempre visible, sin desplegables, y usa contribuciones reales. Su workflow ajusta todos los tiempos juntos al 72 % de su duración original y genera variantes estáticas desde una salida nueva de Platane/snk. No ejecutes el ajuste dos veces sobre la misma salida. Las imágenes principales usan `picture` para seleccionar una variante estática con movimiento reducido. Los textos y enlaces también están disponibles como Markdown.
 
 Pages publica desde **main / (root)**. Después de generar y comprobar los archivos, un push a `main` actualiza el perfil y la página. `.nojekyll` permite servir los archivos estáticos directamente.
 

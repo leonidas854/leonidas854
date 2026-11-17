@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="52" viewBox="0 0 850 52" role="img" aria-labelledby="title">
+<title id="title">Backend, interfaces, contenedores y Rust en aprendizaje</title>
+<style>
+@keyframes type { 0% { width:0; } 55%,100% { width:760px; } }
+@keyframes line { 0%,30% { opacity:1; } 33.33%,100% { opacity:0; } }
+.clip { animation:type 4s steps(55,end) infinite; }
+.line { opacity:0; animation:line 12s steps(1,end) infinite; }
+.second { animation-delay:4s; }.third { animation-delay:8s; }
+@media(prefers-reduced-motion:reduce) { * { animation:none !important; } .line { opacity:0; }.first {opacity:1;} .clip{width:760px;} }
+</style>
+<defs><clipPath id="typing"><rect class="clip" x="45" y="0" width="760" height="52"/></clipPath></defs>
+<rect width="850" height="52" rx="8" fill="#10141e"/>
+<text x="20" y="33" fill="#45ffc0" font-family="monospace" font-size="20">❯</text>
+<g clip-path="url(#typing)" font-family="monospace" font-size="19" fill="#45ffc0">
+<text class="line first" x="45" y="33">C# · Python · Java / del backend a la interfaz_</text>
+<text class="line second" x="45" y="33">React · Next.js · ASP.NET · Spring Boot_</text>
+<text class="line third" x="45" y="33">Aprendiendo Rust / construyendo paso a paso_</text>
+</g><style>*{animation:none!important}.motion{display:none}.type,.clip{width:760px}.line{opacity:0}.first{opacity:1}</style></svg>

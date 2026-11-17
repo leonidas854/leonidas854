@@ -1,7 +1,10 @@
-## Un pequeño mundo entre código y nieve
+## Mi universo: código y nieve
 
 <a href="https://leonidas854.github.io/leonidas854/">
-  <img src="assets/snow-globe.svg" width="850" alt="Bola de nieve animada con una cabaña Rust, una casa Podman y un gopher de Go. Abrir mi espacio interactivo." />
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/world-static.svg">
+  <img src="assets/profile/world.svg" width="850" alt="Casas Rust y Podman, un gopher de Go paseando, partículas en movimiento y nieve cayendo">
+</picture>
 </a>
 
-Rust tiene su cabaña, Podman su casa y Go un compañero paseando por la nieve. Afuera, una galaxia de partículas. [Entra, mueve el cursor y agita la nieve](https://leonidas854.github.io/leonidas854/).
+Rust tiene su cabaña, Podman su casa y Go un compañero en la nieve. [Abre la versión 3D para girar la esfera y agitar la nieve](https://leonidas854.github.io/leonidas854/).

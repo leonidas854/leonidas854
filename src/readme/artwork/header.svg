@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="280" viewBox="0 0 850 280" role="img" aria-labelledby="title">
+<title id="title">Leonidas — desarrollo de software, código y curiosidad</title>
+<style>
+@keyframes orbit { to { transform:rotate(360deg); } }
+.orbit { transform-origin:716px 140px; animation:orbit 18s linear infinite; }
+@media(prefers-reduced-motion:reduce) { .motion { display:none; } * { animation:none !important; } }
+</style>
+<defs><clipPath id="card"><rect width="850" height="280" rx="14"/></clipPath></defs>
+<g clip-path="url(#card)">
+<rect width="850" height="280" fill="#080a10"/>
+{{GALAXY}}
+<rect x="27" y="33" width="545" height="206" rx="12" fill="#10141e"/>
+<text x="52" y="67" fill="#aab8cb" font-family="monospace" font-size="13">THIAGO SOSSA / @leonidas854</text>
+<text x="47" y="132" fill="#e6edf3" font-family="sans-serif" font-size="58" font-weight="800" letter-spacing="-1">LEONIDAS</text>
+<text x="52" y="166" fill="#45ffc0" font-family="monospace" font-size="17">DESARROLLO DE SOFTWARE</text>
+<text x="52" y="205" fill="#aab8cb" font-family="sans-serif" font-size="16">C# · Python · Java · TypeScript · SQL</text>
+<circle cx="716" cy="140" r="69" fill="#10141e" stroke="#64758f"/>
+<g fill="none" stroke="#45ffc0" stroke-width="2"><ellipse cx="716" cy="140" rx="90" ry="35" transform="rotate(-30 716 140)"/><ellipse cx="716" cy="140" rx="90" ry="35" transform="rotate(30 716 140)"/></g>
+<g class="orbit motion"><circle cx="785" cy="140" r="7" fill="#45ffc0"/><circle cx="647" cy="140" r="5" fill="#ffad85"/></g>
+<text x="716" y="154" text-anchor="middle" font-family="monospace" font-size="40" font-weight="700" fill="#e6edf3">&lt;/&gt;</text>
+<rect x="1" y="1" width="848" height="278" rx="14" fill="none" stroke="#64758f"/>
+</g></svg>

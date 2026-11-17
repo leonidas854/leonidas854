@@ -25,8 +25,11 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=#22644e
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#7aa2f7&color_dots=#16161e,#24283b,#7aa2f7,#bb9af7,#7dcfff
+            dist/github-contribution-grid-snake.svg?color_snake=#116149&color_dots=#73839b,#56749b,#3d5b83,#27456c,#112c50
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#45ffc0&color_dots=#64758f,#8eb7ff,#c4b5ff,#ffce83,#e6edf3
+
+      - name: Ajustar movimiento y generar versiones estáticas
+        run: python3 scripts/prepare-snake.py dist
 
       - name: Publicar SVG en la rama output
         uses: crazy-max/ghaction-github-pages@v3.1.0

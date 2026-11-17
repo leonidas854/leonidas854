@@ -1,0 +1,14 @@
+[
+  {"id":"telegram","label":"TELEGRAM","detail":"+591 73902650","icon":"telegram","color":"#8eb7ff"},
+  {"id":"discord","label":"DISCORD","detail":"COMUNIDAD","icon":"discord","color":"#c4b5ff"},
+  {"id":"email","label":"CORREO","detail":"HABLEMOS","icon":"mail","color":"#ffad85"},
+  {"id":"world","label":"MI UNIVERSO","detail":"GALAXIA + NIEVE","icon":"orbit","color":"#45ffc0"},
+  {"id":"stack","label":"TECNOLOGÍAS","detail":"MI STACK","icon":"code","color":"#8eb7ff"},
+  {"id":"activity","label":"ACTIVIDAD","detail":"CONTRIBUCIONES","icon":"github","color":"#45ffc0"},
+  {"id":"telegram-en","label":"TELEGRAM","detail":"+591 73902650","icon":"telegram","color":"#8eb7ff"},
+  {"id":"discord-en","label":"DISCORD","detail":"COMMUNITY","icon":"discord","color":"#c4b5ff"},
+  {"id":"email-en","label":"EMAIL","detail":"GET IN TOUCH","icon":"mail","color":"#ffad85"},
+  {"id":"world-en","label":"MY UNIVERSE","detail":"GALAXY + SNOW","icon":"orbit","color":"#45ffc0"},
+  {"id":"stack-en","label":"TECHNOLOGIES","detail":"MY STACK","icon":"code","color":"#8eb7ff"},
+  {"id":"activity-en","label":"ACTIVITY","detail":"CONTRIBUTIONS","icon":"github","color":"#45ffc0"}
+]

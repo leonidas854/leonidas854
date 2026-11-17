@@ -1,3 +1,5 @@
+<a id="tecnologias"></a>
+
 ## Con qué trabajo
 
 <img src="assets/stack-languages.svg" width="408" alt="C#, Python, Java, TypeScript, JavaScript, HTML y CSS">

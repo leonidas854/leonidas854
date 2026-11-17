@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 290" width="850" height="290" role="img" aria-labelledby="title">
+<title id="title">Perfil de Leonidas: tecnologías, aprendizaje e idiomas</title>
+<style>
+@keyframes type { 0%,8% { width:0; } 55%,100% { width:640px; } }
+@keyframes cursor { 50% { opacity:0; } }
+.type { animation:type 8s steps(64,end) infinite; }
+.cursor { animation:cursor 1s steps(2,end) infinite; }
+@media(prefers-reduced-motion:reduce) { * { animation:none !important; } .type { width:640px; } }
+</style>
+<defs><clipPath id="command"><rect class="type" x="49" y="250" width="640" height="24"/></clipPath></defs>
+<rect x="1" y="1" width="848" height="288" rx="12" fill="#10141e" stroke="#64758f"/>
+<path d="M13 1H837Q849 1 849 13V38H1V13Q1 1 13 1" fill="#181e2b"/>
+<circle cx="23" cy="19" r="5" fill="#ff829b"/><circle cx="41" cy="19" r="5" fill="#e0af68"/><circle cx="59" cy="19" r="5" fill="#45ffc0"/>
+<text x="425" y="24" text-anchor="middle" font-family="monospace" font-size="13" fill="#aab8cb">leonidas@dev:~ / perfil</text>
+<g font-family="monospace" font-size="15">
+<g fill="#8eb7ff"><text x="28" y="75">nombre</text><text x="28" y="108">lenguajes</text><text x="28" y="141">frameworks</text><text x="28" y="174">contenedores</text><text x="28" y="207">aprendiendo</text><text x="28" y="240">idiomas</text></g>
+<g fill="#e6edf3"><text x="185" y="75">Thiago Sossa / @leonidas854</text><text x="185" y="108">C# · Python · Java · TS · JS · SQL · HTML · CSS</text><text x="185" y="141">ASP.NET · Spring Boot · Django · React · Next.js</text><text x="185" y="174">Docker · Podman</text><text x="185" y="240">Español / English A2</text></g>
+<text x="185" y="207" fill="#ffad85">Rust</text>
+<text x="28" y="271" fill="#45ffc0">❯</text><g clip-path="url(#command)"><text x="49" y="271" fill="#45ffc0">const siguientePaso = "seguir aprendiendo Rust";<tspan class="cursor">_</tspan></text></g>
+</g><style>*{animation:none!important}.motion{display:none}.type,.clip{width:760px}.line{opacity:0}.first{opacity:1}</style></svg>

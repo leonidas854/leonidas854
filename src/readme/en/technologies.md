@@ -1,3 +1,5 @@
+<a id="technologies"></a>
+
 ## What I work with
 
 <img src="assets/stack-languages.svg" width="408" alt="C#, Python, Java, TypeScript, JavaScript, HTML and CSS">
