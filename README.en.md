@@ -123,16 +123,17 @@ My daily engineering centers around typed, resilient environments like **C# (.NE
 
 <!-- ==================== VISUAL EXPERIMENT / SNOW GLOBE ==================== -->
 
-## ❄️ Visual Showcase: Snow Globe & Cosmic Field
+## ❄️ Snow Globe & Cosmic Field
 
 <img src="assets/snow-globe.svg" width="100%" alt="Snow Globe & Cosmic Field" />
 
 <br/>
 
-This repository incorporates an **interactive simulation in Three.js & Canvas** inspired by particle blizzard physics and cosmic gravitational vortex fields:
-- 🌌 **Cosmic Nebula Field:** Multi-strand fluid dynamics with pointer interaction.
-- ❄️ **Blizzard Simulation:** Wind-driven particle dynamics and drift patterns.
-- 🔗 **Interactive Demo:** You can run the interactive simulation locally via [index.html](index.html) or visit the deployed version on [GitHub Pages](https://leonidas854.github.io/leonidas854/).
+Interactive visualization and particle simulation with winter blizzard physics and cosmic fluid dynamics:
+- 🦀 **Rust Cabin & Podman Lab:** Systems programming, memory safety, and rootless container isolation.
+- 🐹 **Golang Gopher:** High-concurrency microservices and networked tools.
+- 🌌 **Particle Field:** Real-time fluid filaments and gravitational vortex dynamics.
+- 🔗 **Live Interaction:** You can interact with the complete simulation via [index.html](index.html) or visit the deployed version on [GitHub Pages](https://leonidas854.github.io/leonidas854/).
 
 <img src="assets/divider.svg" width="100%" alt="Divider" />
 

@@ -123,16 +123,17 @@ Trabajo principalmente con ecosistemas tipados y robustos como **C# (.NET)**, **
 
 <!-- ==================== EXPERIMENTO VISUAL / ESFERA DE NIEVE ==================== -->
 
-## ❄️ Experimento Visual: Esfera de Nieve & Campo Cósmico
+## ❄️ Bola de Nieve & Campo Cósmico
 
-<img src="assets/snow-globe.svg" width="100%" alt="Esfera de Nieve y Campo Cósmico" />
+<img src="assets/snow-globe.svg" width="100%" alt="Bola de Nieve y Campo Cósmico" />
 
 <br/>
 
-Este repositorio integra una **simulación interactiva en Three.js / Canvas** inspirada en físicas de partículas de nieve (*blizzard*) y campos gravitatorios de polvo cósmico con vórtices dinámicos:
-- 🌌 **Fondo Cósmico:** Campo de partículas con dinámica de fluidos y seguimiento de cursor.
-- ❄️ **Simulación de Nieve:** Sistema de tormenta de nieve con aceleración y turbulencia lateral.
-- 🔗 **Acceso en Vivo:** Puedes probar la simulación interactiva completa abriendo el archivo [index.html](index.html) o visitando la versión desplegada en [GitHub Pages](https://leonidas854.github.io/leonidas854/).
+Visualización y simulación interactiva con física de partículas, ventisca invernal y campo cósmico:
+- 🦀 **Cabaña Rust & Laboratorio Podman:** Desarrollo de sistemas concurrentes y contenedores aislados.
+- 🐹 **Golang Gopher:** Microservicios y servicios concurrentes de alta velocidad.
+- 🌌 **Campo de Partículas:** Filamentos y vórtices interactivos en tiempo real.
+- 🔗 **Acceso en Vivo:** Puedes interactuar con la simulación completa abriendo [index.html](index.html) o visitando la versión desplegada en [GitHub Pages](https://leonidas854.github.io/leonidas854/).
 
 <img src="assets/divider.svg" width="100%" alt="Divider" />
 
