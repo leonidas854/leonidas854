@@ -2,9 +2,14 @@
 from pathlib import Path
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
+from readme.seal import add_seal
 
 ROOT = Path(__file__).resolve().parent.parent
-source = (ROOT / "assets/globe-scene.svg").read_text()
+ET.register_namespace('', 'http://www.w3.org/2000/svg')
+scene = ET.parse(ROOT / "assets/globe-scene.svg").getroot()
+add_seal(scene)
+source = ET.tostring(scene, encoding='unicode')
 for name, css in {
     "static": "* { animation: none !important; }",
 }.items():

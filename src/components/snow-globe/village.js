@@ -1,6 +1,7 @@
 import * as THREE from "../../vendor/three/three.module.js";
 import { material, mesh, box, label, logoMaterial } from "./primitives.js";
 import { createGopher } from "./characters.js";
+import { createPodmanSeal } from "./podman-seal.js";
 
 function house(parent, x, name, logo) {
   const group = new THREE.Group();
@@ -85,8 +86,9 @@ export async function createVillage(world) {
     [0.2, -1.7, 1.1],
     [1.3, -1.3, 0.8],
   ].forEach((p) => pine(world, ...p));
-  createGopher(world, -0.4, 1.1);
-  createGopher(world, 0.42, 0.87, 0xe9bc64).scale.setScalar(0.82);
+  createGopher(world, -0.65, 1.1);
+  createGopher(world, 0.02, 0.87, 0xe9bc64).scale.setScalar(0.82);
+  const seal = createPodmanSeal(world, 0.95, 1.05);
   const path = mesh(
     world,
     new THREE.CircleGeometry(0.8, 40),
@@ -97,4 +99,5 @@ export async function createVillage(world) {
   );
   path.rotation.x = -Math.PI / 2;
   path.scale.set(0.55, 1.4, 1);
+  return { update: (time) => seal.update(time) };
 }

@@ -1,11 +1,13 @@
 """Adapt the supplied vector village into a visibly animated README scene."""
 from pathlib import Path
 import xml.etree.ElementTree as ET
+from seal import add_seal
 
 ROOT=Path(__file__).resolve().parents[2]
 NS='http://www.w3.org/2000/svg'
 ET.register_namespace('',NS)
 root=ET.parse(ROOT/'assets/globe-scene.svg').getroot()
+add_seal(root)
 village=next(node for node in root if node.tag==f'{{{NS}}}g')
 # Keep source geometry untouched; animation goes inside existing positioning groups.
 for node in village.iter():
@@ -47,7 +49,7 @@ style='''
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.motion{display:none}}
 '''
 svg=f'''<svg xmlns="{NS}" width="850" height="420" viewBox="0 0 850 420" role="img" aria-labelledby="title">
-<title id="title">El universo de Leonidas: casas Rust y Podman, gophers y nieve en movimiento</title>
+<title id="title">El universo de Leonidas: casas Rust y Podman, gopher de Go y foca de Podman en la nieve</title>
 <style>{style}</style><rect width="850" height="420" rx="14" fill="#080a10"/>
 {{{{GALAXY}}}}
 <g transform="translate(200,-10) scale(1.5)">{body}</g>

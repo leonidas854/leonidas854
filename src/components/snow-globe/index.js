@@ -129,7 +129,7 @@ export async function createSnowGlobe(stage, onUnavailable) {
     delete stage.dataset.ready;
   }
   try {
-    await createVillage(world);
+    const village = await createVillage(world);
     renderer.domElement.setAttribute("aria-hidden", "true");
     renderer.domElement.addEventListener(
       "webglcontextlost",
@@ -154,6 +154,7 @@ export async function createSnowGlobe(stage, onUnavailable) {
       shake: () => snow.shake(),
       update(dt) {
         time += dt;
+        village.update(time);
         snow.update(dt, time);
         if (!userRotated) world.rotation.y = Math.sin(time * 0.14) * 0.1;
         render();

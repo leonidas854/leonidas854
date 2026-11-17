@@ -13,6 +13,8 @@ Perfil: [leonidas854](https://github.com/leonidas854). Página: [Código, galaxi
 | Enlaces de contacto | `src/components/contact/` |
 | Fondo de partículas | `src/components/galaxy/` |
 | Esfera, casas, personajes y nieve | `src/components/snow-globe/` |
+| Foca de Podman en 3D | `src/components/snow-globe/podman-seal.js` |
+| Foca de Podman en SVG y vista sin WebGL | `src/readme/artwork/podman-seal.svg` y `scripts/readme/seal.py` |
 | Paleta, tipografía y controles comunes | `src/styles/base.css` |
 | Pausa, movimiento reducido y visibilidad | `src/shared/motion.js` |
 | Conexión entre los componentes | `src/app.js` |
