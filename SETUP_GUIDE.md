@@ -1,54 +1,58 @@
-# 🚀 Guía del Repositorio de Perfil: leonidas854
+# Mantener y reutilizar este perfil
 
-Este repositorio está conectado y publicado en GitHub como el perfil principal de tu cuenta:
-**[https://github.com/leonidas854/leonidas854](https://github.com/leonidas854/leonidas854)**
+El perfil pertenece a [leonidas854](https://github.com/leonidas854) y su repositorio público es [leonidas854/leonidas854](https://github.com/leonidas854/leonidas854).
 
----
+## Qué editar
 
-## 📌 Estado Actual y Canales Configurados
+| Archivo | Contenido |
+| --- | --- |
+| `README.md` / `README.en.md` | Presentación, tecnologías, nivel de experiencia y contactos |
+| `index.html` | Contenido de la página interactiva |
+| `assets/profile.css` | Colores, diseño y adaptación a móvil |
+| `assets/universe.js` | Galaxia, interacción y controles de movimiento |
+| `assets/globe-scene.svg` | Ilustración original editable de la bola de nieve |
+| `assets/snow-globe.svg` | Ilustración con texto para el README |
+| `assets/header-banner.svg` | Cabecera del perfil |
+| `CREDITS.md` | Atribuciones y condiciones de los recursos |
 
-| Canal / Recurso | Configuración Actual |
-| :--- | :--- |
-| **Usuario GitHub** | `leonidas854` |
-| **Discord** | [https://discord.gg/4DSrRk4CJS](https://discord.gg/4DSrRk4CJS) |
-| **Telegram** | `+59173902650` (Bolivia) |
-| **Correo** | `tsosachugar@gmail.com` |
-| **Contenedores** | `Docker` • `Podman` |
-| **Cloud (Fundamentos)**| `AWS` • `Google Cloud (GCP)` |
-| **Aprendizaje Activo**| `Rust 🦀` |
+Tras cambiar la bola de nieve, ejecuta `python3 scripts/build-assets.py` para actualizar sus variantes de pausa y nevada. Si modificas su dibujo, actualiza también la ilustración del README.
 
----
+La escena del README usa SVG con animación CSS interna y alternativa estática si el visor no la reproduce. El dibujo sigue visible con movimiento reducido. GitHub no ejecuta el JavaScript ni los estilos HTML de una página dentro de un README; la interacción está en GitHub Pages. [Referencia de GitHub](https://github.com/github/markup).
 
-## 🌌 Activar GitHub Pages para la Simulación Cósmica 3D (Opcional)
+## Probar localmente
 
-El repositorio incluye un archivo interactivo [index.html](file:///home/leonidas/deveploment/perfil/index.html) con simulación de partículas cósmicas y físicas de vórtice. Para que se pueda abrir en internet como sitio web:
+Requisitos: Python 3; Node.js solo para comprobar la sintaxis de JavaScript. No se necesita instalar paquetes ni configurar claves.
 
-1. Ve a tu repositorio en GitHub: [https://github.com/leonidas854/leonidas854](https://github.com/leonidas854/leonidas854)
-2. Haz clic en la pestaña **Settings** (⚙️ Configuración).
-3. En el menú lateral izquierdo, haz clic en **Pages**.
-4. En **Build and deployment -> Branch**:
-   - Selecciona la rama **main**.
-   - Carpeta: **/(root)**.
-   - Haz clic en **Save**.
-5. En unos momentos, tu simulación interactiva estará disponible públicamente en:
-   👉 **https://leonidas854.github.io/leonidas854/**
+```sh
+python3 scripts/check.py
+node --check assets/universe.js
+python3 -m http.server 8765 --bind 127.0.0.1
+```
 
----
+Abre [la vista local](http://localhost:8765) y comprueba los enlaces, «Agitar la nieve» y «Pausar animación». La página respeta el tema del sistema, el movimiento reducido y los colores forzados. Pausa el movimiento al ocultar la pestaña o salir la escena de la pantalla. El perfil, sus enlaces y el dibujo siguen disponibles sin JavaScript.
 
-## 🐍 Mantenimiento de la Serpiente de Contribuciones
+## Publicar en GitHub Pages
 
-El flujo de trabajo en [.github/workflows/snake.yml](file:///home/leonidas/deveploment/perfil/.github/workflows/snake.yml) se ejecuta automáticamente todos los días a medianoche UTC.
-Si en algún momento deseas forzar una actualización manual de tus contribuciones:
-1. Ve a la pestaña **Actions**.
-2. Selecciona **Generate Contribution Snake**.
-3. Haz clic en **Run workflow**.
+La fuente de publicación es **main / (root)**. El archivo `.nojekyll` permite servir HTML, CSS, JS y SVG tal como están. Cada push a `main` actualiza el perfil y vuelve a publicar la página cuando Pages está activado.
 
----
+Para activar o verificar esa configuración: repositorio → **Settings → Pages → Deploy from a branch → main → /(root)**. El enlace esperado es [leonidas854.github.io/leonidas854](https://leonidas854.github.io/leonidas854/). La publicación puede tardar unos minutos; comprueba el resultado en Actions. [Documentación oficial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-## ❓ Preguntas Frecuentes
+## Usarlo en otra cuenta
 
-**¿Por qué las imágenes de estadísticas no cambian de inmediato en GitHub?**
-> GitHub almacena en caché las imágenes externas mediante el proxy seguro *Camo*. Si realizas cambios en tus repositorios, la caché se refresca automáticamente cada pocas horas, o puedes forzar la recarga con `Ctrl + F5`.
+1. Crea un repositorio **público con el mismo nombre que tu usuario** y coloca `README.md` en la raíz. [Requisitos del perfil](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
+2. Sustituye `leonidas854`, el nombre, el correo, Telegram y Discord en ambos README y en `index.html`. Ajusta también los SVG y esta guía.
+3. Actualiza los niveles de experiencia con tus datos y conserva los créditos que correspondan.
+4. Activa Pages si quieres la página interactiva y cambia sus enlaces por los de tu cuenta.
+5. Ejecuta las comprobaciones antes de publicar.
 
-**¿Cómo incluir contribuciones de repositorios privados?**
-> Ve a tu perfil en GitHub (`https://github.com/settings/profile`), busca la sección **Contributions & Activity** y marca la casilla **"Include private contributions on my profile"**.
+## Animación de contribuciones
+
+Se conserva el workflow existente `Generate Contribution Snake`, que actualiza la rama `output` a diario a las 00:00 UTC (20:00 del día anterior en Bolivia), al publicar en `main` o manualmente desde Actions. La sección «Mi actividad en GitHub» del README usa esas imágenes. En una copia nueva, ejecuta el workflow una vez para generarlas. Si no quieres esta función, elimina esa sección y su workflow.
+
+`Check profile` verifica los archivos en cada push y pull request. Solo necesita permisos de lectura. La serpiente necesita `contents: write` para actualizar exclusivamente su rama de salida.
+
+## Recursos y privacidad
+
+Los recursos de la página son locales. Los contactos son enlaces, sin formularios ni analítica. El enlace telefónico de Telegram depende de la configuración de descubrimiento de tu cuenta; si no abre tu conversación, reemplázalo por tu alias público `t.me/usuario`. Discord depende de la vigencia de la invitación.
+
+Código original bajo MIT. Consulta `CREDITS.md` para los recursos y marcas de terceros. No se incluyen proyectos destacados por decisión del autor.

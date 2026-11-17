@@ -12,3 +12,8 @@ Thumbs.db
 *.tmp
 *.log
 
+# Local browser verification
+output/
+.playwright-cli/
+__pycache__/
+

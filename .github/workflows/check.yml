@@ -1,0 +1,21 @@
+name: Check profile
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check local links and SVG files
+        run: python3 scripts/check.py
+      - name: Check JavaScript syntax
+        run: node --check assets/universe.js
+      - name: Check generated illustrations
+        run: |
+          python3 scripts/build-assets.py
+          git diff --exit-code -- assets/
