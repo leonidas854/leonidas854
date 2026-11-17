@@ -1,165 +1,205 @@
-<svg fill="none" viewBox="0 0 850 250" width="850" height="250" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 850 260" width="850" height="260" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradients -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#16161e"/>
-      <stop offset="50%" stop-color="#1a1b26"/>
-      <stop offset="100%" stop-color="#1f2335"/>
-    </linearGradient>
+    <!-- Cosmic Nebula Radial Gradients -->
+    <radialGradient id="space-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#281027"/>
+      <stop offset="42%" stop-color="#110d19"/>
+      <stop offset="100%" stop-color="#030308"/>
+    </radialGradient>
 
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7"/>
-      <stop offset="50%" stop-color="#bb9af7"/>
-      <stop offset="100%" stop-color="#7dcfff"/>
-    </linearGradient>
+    <radialGradient id="nebula-magenta" cx="20%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#ff3399" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ff3399" stop-opacity="0"/>
+    </radialGradient>
 
-    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7dcfff"/>
-      <stop offset="100%" stop-color="#2ac3de"/>
-    </linearGradient>
+    <radialGradient id="nebula-cyan" cx="80%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#45ffc0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#45ffc0" stop-opacity="0"/>
+    </radialGradient>
 
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#414868"/>
-      <stop offset="50%" stop-color="#7aa2f7"/>
-      <stop offset="100%" stop-color="#24283b"/>
-    </linearGradient>
-
-    <radialGradient id="glow-left" cx="0%" cy="0%" r="70%">
+    <radialGradient id="nebula-blue" cx="50%" cy="40%" r="65%">
       <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="glow-right" cx="100%" cy="100%" r="70%">
-      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#7aa2f7"/>
+      <stop offset="70%" stop-color="#bb9af7"/>
+      <stop offset="100%" stop-color="#45ffc0"/>
+    </linearGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#24283b" stroke-width="0.8" stroke-opacity="0.5"/>
-    </pattern>
+    <linearGradient id="border-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff66cf" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#7aa2f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#45ffc0" stop-opacity="0.4"/>
+    </linearGradient>
 
     <style>
       .mono { font-family: 'SF Mono', Consolas, 'Fira Code', Menlo, monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
       
-      .title-text {
-        font-size: 30px;
+      .hero-title {
+        font-size: 32px;
         font-weight: 800;
         letter-spacing: -0.5px;
         fill: url(#title-grad);
       }
       
-      .sub-text {
-        font-size: 14px;
+      .hero-sub {
+        font-size: 13.5px;
         font-weight: 400;
-        fill: #a9b1d6;
-        letter-spacing: 0.3px;
+        fill: #c0caf5;
+        letter-spacing: 0.2px;
       }
-      
-      .badge-text {
+
+      .badge-txt {
         font-size: 10px;
         font-weight: 700;
         letter-spacing: 1.5px;
-        fill: #7dcfff;
+        fill: #45ffc0;
       }
 
-      .chip-text {
+      .chip-txt {
         font-size: 11px;
         font-weight: 600;
       }
 
-      @keyframes pulse {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.8; }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.25; }
+        50% { opacity: 0.95; }
       }
 
-      @keyframes floatUpDown {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-4px); }
+      @keyframes blizzard-drift {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-80px, 120px); }
       }
 
-      .floating-1 { animation: floatUpDown 4s ease-in-out infinite; }
-      .floating-2 { animation: floatUpDown 5s ease-in-out infinite 1s; }
-      .pulsing-dot { animation: pulse 2s ease-in-out infinite; }
+      .star-twinkle-1 { animation: twinkle 3s ease-in-out infinite; }
+      .star-twinkle-2 { animation: twinkle 4.5s ease-in-out infinite 1s; }
+      .star-twinkle-3 { animation: twinkle 2.5s ease-in-out infinite 1.8s; }
+      .snow-layer { animation: blizzard-drift 9s linear infinite; }
     </style>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="848" height="248" x="1" y="1" rx="16" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5"/>
+  <!-- Deep Cosmic Canvas Background -->
+  <rect width="848" height="258" x="1" y="1" rx="16" fill="url(#space-bg)" stroke="url(#border-glow)" stroke-width="1.2"/>
 
-  <!-- Subtle Tech Grid -->
-  <rect width="846" height="246" x="2" y="2" rx="15" fill="url(#grid)" />
+  <!-- Nebulae layers -->
+  <rect width="848" height="258" x="1" y="1" rx="16" fill="url(#nebula-magenta)" />
+  <rect width="848" height="258" x="1" y="1" rx="16" fill="url(#nebula-cyan)" />
+  <rect width="848" height="258" x="1" y="1" rx="16" fill="url(#nebula-blue)" />
 
-  <!-- Ambient Glows -->
-  <circle cx="80" cy="50" r="140" fill="url(#glow-left)"/>
-  <circle cx="770" cy="200" r="160" fill="url(#glow-right)"/>
-
-  <!-- Top Decorative Badge: SYSTEM ONLINE -->
-  <g transform="translate(345, 28)">
-    <rect width="160" height="24" rx="12" fill="#1f2335" stroke="#7aa2f7" stroke-opacity="0.3" stroke-width="1"/>
-    <circle cx="16" cy="12" r="4" fill="#73daca" class="pulsing-dot"/>
-    <text x="30" y="15.5" class="mono badge-text">SYSTEM ONLINE</text>
+  <!-- Cosmic Stars & Dust Particles -->
+  <g class="star-twinkle-1">
+    <circle cx="95" cy="45" r="1.2" fill="#ffffff" opacity="0.8"/>
+    <circle cx="180" cy="85" r="1.5" fill="#45ffc0" opacity="0.9"/>
+    <circle cx="310" cy="30" r="1" fill="#ff66cf" opacity="0.7"/>
+    <circle cx="480" cy="40" r="1.4" fill="#ffffff" opacity="0.8"/>
+    <circle cx="650" cy="75" r="1.2" fill="#7aa2f7" opacity="0.9"/>
+    <circle cx="760" cy="45" r="1.6" fill="#45ffc0" opacity="0.75"/>
+    <circle cx="810" cy="110" r="1" fill="#ffffff" opacity="0.6"/>
   </g>
 
-  <!-- Floating Tech Chip 1: ASP.NET & Spring -->
-  <g transform="translate(45, 36)" class="floating-1">
-    <rect width="136" height="28" rx="14" fill="#1f2335" stroke="#7aa2f7" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="68" y="18" text-anchor="middle" class="mono chip-text" fill="#7aa2f7">&lt;/&gt; ASP.NET &amp; Spring</text>
+  <g class="star-twinkle-2">
+    <circle cx="50" cy="180" r="1.4" fill="#7aa2f7" opacity="0.8"/>
+    <circle cx="140" cy="220" r="1" fill="#ffffff" opacity="0.7"/>
+    <circle cx="260" cy="190" r="1.6" fill="#ff66cf" opacity="0.85"/>
+    <circle cx="590" cy="210" r="1.2" fill="#45ffc0" opacity="0.8"/>
+    <circle cx="710" cy="190" r="1.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="780" cy="225" r="1.2" fill="#7aa2f7" opacity="0.85"/>
   </g>
 
-  <!-- Floating Tech Chip 2: Full-Stack Dev -->
-  <g transform="translate(45, 185)" class="floating-2">
-    <rect width="130" height="28" rx="14" fill="#1f2335" stroke="#f7768e" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="65" y="18" text-anchor="middle" class="mono chip-text" fill="#f7768e">⚡ Full Stack Dev</text>
+  <g class="star-twinkle-3">
+    <circle cx="70" cy="110" r="0.8" fill="#ffffff" opacity="0.6"/>
+    <circle cx="230" cy="60" r="1.2" fill="#7aa2f7" opacity="0.75"/>
+    <circle cx="390" cy="25" r="1.5" fill="#45ffc0" opacity="0.85"/>
+    <circle cx="530" cy="220" r="1" fill="#ff66cf" opacity="0.7"/>
+    <circle cx="680" cy="140" r="0.9" fill="#ffffff" opacity="0.5"/>
   </g>
 
-  <!-- Floating Tech Chip 3: Rust Explorer -->
-  <g transform="translate(670, 36)" class="floating-2">
-    <rect width="135" height="28" rx="14" fill="#1f2335" stroke="#e0af68" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="67" y="18" text-anchor="middle" class="mono chip-text" fill="#e0af68">🦀 Learning Rust</text>
+  <!-- Blizzard Flakes (Diagonal Wind Angle) -->
+  <g opacity="0.45" class="snow-layer">
+    <ellipse cx="120" cy="30" rx="1.2" ry="3" transform="rotate(-28 120 30)" fill="#ffffff"/>
+    <ellipse cx="280" cy="50" rx="1.5" ry="3.8" transform="rotate(-30 280 50)" fill="#ffffff"/>
+    <ellipse cx="440" cy="20" rx="1.1" ry="2.8" transform="rotate(-28 440 20)" fill="#ffffff"/>
+    <ellipse cx="620" cy="40" rx="1.4" ry="3.5" transform="rotate(-32 620 40)" fill="#ffffff"/>
+    <ellipse cx="730" cy="25" rx="1.6" ry="4" transform="rotate(-28 730 25)" fill="#ffffff"/>
+    <ellipse cx="190" cy="140" rx="1" ry="2.5" transform="rotate(-30 190 140)" fill="#ffffff"/>
+    <ellipse cx="360" cy="160" rx="1.3" ry="3.2" transform="rotate(-28 360 160)" fill="#ffffff"/>
+    <ellipse cx="510" cy="130" rx="1.5" ry="3.8" transform="rotate(-30 510 130)" fill="#ffffff"/>
+    <ellipse cx="690" cy="150" rx="1.2" ry="3" transform="rotate(-28 690 150)" fill="#ffffff"/>
+    <ellipse cx="820" cy="170" rx="1.4" ry="3.5" transform="rotate(-32 820 170)" fill="#ffffff"/>
   </g>
 
-  <!-- Floating Tech Chip 4: React & Next.js -->
-  <g transform="translate(670, 185)" class="floating-1">
-    <rect width="135" height="28" rx="14" fill="#1f2335" stroke="#9ece6a" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="67" y="18" text-anchor="middle" class="mono chip-text" fill="#9ece6a">🚀 Next.js &amp; React</text>
+  <!-- Status Indicator: LIVE DEV ENVIRONMENT -->
+  <g transform="translate(330, 24)">
+    <rect width="190" height="24" rx="12" fill="#0c0e18" stroke="#45ffc0" stroke-opacity="0.35" stroke-width="1"/>
+    <circle cx="16" cy="12" r="3.5" fill="#45ffc0" class="star-twinkle-1"/>
+    <text x="28" y="15.5" class="mono badge-txt">LEONIDAS • BOLIVIA</text>
   </g>
 
-  <!-- Main Hero Title & Content -->
+  <!-- Left Tech Chip: Containers (Docker & Podman) -->
+  <g transform="translate(42, 35)">
+    <rect width="168" height="26" rx="13" fill="#0e111d" stroke="#7aa2f7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="84" y="17" text-anchor="middle" class="mono chip-txt" fill="#7aa2f7">🐳 Docker &amp; Podman</text>
+  </g>
+
+  <!-- Left Tech Chip 2: Cloud Foundations -->
+  <g transform="translate(42, 195)">
+    <rect width="168" height="26" rx="13" fill="#0e111d" stroke="#bb9af7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="84" y="17" text-anchor="middle" class="mono chip-txt" fill="#bb9af7">☁️ AWS &amp; GCP (Básico)</text>
+  </g>
+
+  <!-- Right Tech Chip 1: Rust Explorer -->
+  <g transform="translate(640, 35)">
+    <rect width="168" height="26" rx="13" fill="#0e111d" stroke="#e0af68" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="84" y="17" text-anchor="middle" class="mono chip-txt" fill="#e0af68">🦀 Aprendiendo Rust</text>
+  </g>
+
+  <!-- Right Tech Chip 2: Modern Full-Stack -->
+  <g transform="translate(640, 195)">
+    <rect width="168" height="26" rx="13" fill="#0e111d" stroke="#45ffc0" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="84" y="17" text-anchor="middle" class="mono chip-txt" fill="#45ffc0">&lt;/&gt; ASP.NET &amp; React</text>
+  </g>
+
   <!-- Main Title -->
-  <text x="425" y="105" text-anchor="middle" class="sans title-text">Full Stack Developer &amp; Software Engineer</text>
+  <text x="425" y="104" text-anchor="middle" class="sans hero-title">Leonidas | Software Engineer</text>
 
   <!-- Subtitle -->
-  <text x="425" y="135" text-anchor="middle" class="sans sub-text">Turning complex ideas into scalable, clean and robust software</text>
+  <text x="425" y="134" text-anchor="middle" class="sans hero-sub">Desarrollo Backend &amp; Full Stack • Arquitectura de Software • APIs RESTful</text>
 
-  <!-- Tech tags bar in center -->
-  <g transform="translate(195, 160)">
-    <!-- Tag 1: C# -->
-    <rect x="0" y="0" width="45" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
-    <text x="22.5" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">C#</text>
+  <!-- Core Tech Badges Center -->
+  <g transform="translate(145, 156)">
+    <!-- C# -->
+    <rect x="0" y="0" width="46" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="23" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">C#</text>
 
-    <!-- Tag 2: Python -->
-    <rect x="52" y="0" width="62" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
-    <text x="83" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">Python</text>
+    <!-- Python -->
+    <rect x="54" y="0" width="66" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="87" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">Python</text>
 
-    <!-- Tag 3: Java -->
-    <rect x="121" y="0" width="52" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
-    <text x="147" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">Java</text>
+    <!-- Java -->
+    <rect x="128" y="0" width="54" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="155" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">Java</text>
 
-    <!-- Tag 4: TypeScript -->
-    <rect x="180" y="0" width="88" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
-    <text x="224" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">TypeScript</text>
+    <!-- TypeScript -->
+    <rect x="190" y="0" width="94" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="237" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">TypeScript</text>
 
-    <!-- Tag 5: SQL -->
-    <rect x="275" y="0" width="50" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
-    <text x="300" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">SQL</text>
+    <!-- SQL -->
+    <rect x="292" y="0" width="52" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="318" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">SQL</text>
 
-    <!-- Tag 6: Rust Explorer (Special Highlight) -->
-    <rect x="332" y="0" width="128" height="22" rx="6" fill="#292e42" stroke="#e0af68" stroke-opacity="0.6" stroke-width="1"/>
-    <text x="396" y="15" text-anchor="middle" class="mono chip-text" fill="#e0af68">🦀 Rust Explorer</text>
+    <!-- Next.js & React -->
+    <rect x="352" y="0" width="112" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="408" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">Next.js • React</text>
+
+    <!-- Spring Boot -->
+    <rect x="472" y="0" width="90" height="22" rx="6" fill="#141829" stroke="#7aa2f7" stroke-width="0.8"/>
+    <text x="517" y="15" text-anchor="middle" class="mono chip-txt" fill="#c0caf5">Spring Boot</text>
   </g>
 
-  <!-- Bottom Accent Line -->
-  <line x1="280" y1="210" x2="570" y2="210" stroke="url(#title-grad)" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
+  <!-- Subtle Bottom Line with Cosmic Gradient -->
+  <line x1="260" y1="218" x2="590" y2="218" stroke="url(#title-grad)" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.5"/>
 </svg>
