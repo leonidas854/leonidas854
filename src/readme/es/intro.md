@@ -26,5 +26,5 @@ Soy **Thiago Sossa**, **[@leonidas854](https://github.com/leonidas854)**. Trabaj
   <img src="assets/profile/terminal.svg" width="850" alt="Mi perfil y una terminal con escritura animada">
 </picture>
 
-<p align="center"><a href="#tecnologias"><img src="assets/profile/buttons/stack.svg" width="164" height="52" alt="Ver tecnologías"></a>
-<a href="#actividad"><img src="assets/profile/buttons/activity.svg" width="164" height="52" alt="Ver contribuciones"></a></p>
+<p align="center"><a href="#user-content-tecnologias"><img src="assets/profile/buttons/stack.svg" width="164" height="52" alt="Ver tecnologías"></a>
+<a href="#user-content-actividad"><img src="assets/profile/buttons/activity.svg" width="164" height="52" alt="Ver contribuciones"></a></p>

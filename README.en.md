@@ -27,8 +27,8 @@ I’m **Thiago Sossa**, **[@leonidas854](https://github.com/leonidas854)**. I wo
   <img src="assets/profile/terminal.svg" width="850" alt="My developer profile and animated terminal">
 </picture>
 
-<p align="center"><a href="#technologies"><img src="assets/profile/buttons/stack-en.svg" width="164" height="52" alt="Technologies"></a>
-<a href="#activity"><img src="assets/profile/buttons/activity-en.svg" width="164" height="52" alt="Contributions"></a></p>
+<p align="center"><a href="#user-content-technologies"><img src="assets/profile/buttons/stack-en.svg" width="164" height="52" alt="Technologies"></a>
+<a href="#user-content-activity"><img src="assets/profile/buttons/activity-en.svg" width="164" height="52" alt="Contributions"></a></p>
 
 <img src="assets/profile/divider.svg" width="850" height="18" alt="">
 

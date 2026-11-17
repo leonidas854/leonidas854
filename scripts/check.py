@@ -35,7 +35,11 @@ for name in ("index.html", "README.md", "README.en.md", "SETUP_GUIDE.md", "CREDI
         if link.startswith(("https://", "http://", "mailto:")):
             continue
         if link.startswith("#"):
-            assert link[1:] in parser.ids, f"{name}: missing anchor {link}"
+            anchor = link[1:]
+            # GitHub prefixes custom README IDs during HTML sanitization.
+            if name.startswith("README") and anchor.startswith("user-content-"):
+                anchor = anchor.removeprefix("user-content-")
+            assert anchor in parser.ids, f"{name}: missing anchor {link}"
         else:
             assert (ROOT / link.split("#")[0]).is_file(), f"{name}: missing file {link}"
     if name.startswith("README"):
