@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(350px, 0.9fr) minmax(0, 1.15fr);
+  gap: 20px;
+  align-items: center;
+  min-height: 690px;
+  padding-block: 38px 65px;
+}
+.profile {
+  position: relative;
+  z-index: 1;
+}
+.profile h1 {
+  width: fit-content;
+  background: var(--background);
+  font: 800 clamp(39px, 5vw, 64px) / 1.12 var(--sans);
+  letter-spacing: -0.035em;
+  padding: 4px 12px 8px 0;
+}
+.profile h1 span {
+  display: block;
+  font: 500 16px/1.5 var(--mono);
+  letter-spacing: 0;
+  color: var(--mint);
+  margin-top: 14px;
+}
+.profile-intro {
+  display: table;
+  background: var(--background);
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 22px;
+  padding: 2px 10px 2px 0;
+}
+.terminal {
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+  font: 12px/1.8 var(--mono);
+  max-width: 475px;
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--divider);
+  background: var(--raised);
+  color: var(--muted);
+}
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+.terminal-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff829b;
+}
+.terminal-dots i:nth-child(2) {
+  background: #e0af68;
+}
+.terminal-dots i:nth-child(3) {
+  background: #45ffc0;
+}
+.terminal dl {
+  margin: 16px;
+}
+.terminal dl > div {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 10px;
+  margin-block: 6px;
+}
+.terminal dt {
+  color: var(--blue);
+}
+.terminal dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.terminal-prompt {
+  margin: 0 16px 16px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.terminal-prompt > span:first-child {
+  color: var(--mint);
+  margin-right: 8px;
+}
+.cursor {
+  color: var(--mint);
+  animation: cursor 1.4s steps(2, end) infinite;
+}
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
+}
+[data-motion="paused"] .cursor {
+  animation-play-state: paused;
+}
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 25px;
+  }
+  .terminal {
+    max-width: 100%;
+  }
+  .profile h1 {
+    font-size: 48px;
+  }
+}

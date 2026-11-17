@@ -1,0 +1,38 @@
+<section class="snow-globe" aria-labelledby="globe-title">
+  <h2 id="globe-title" class="sr-only">Mi mundo entre código y nieve</h2>
+  <div
+    id="globe-stage"
+    class="globe-stage"
+    tabindex="0"
+    role="group"
+    aria-label="Bola de nieve 3D con casas Rust y Podman y personajes Go. Arrastra o usa las flechas para girar."
+    aria-describedby="globe-hint"
+  >
+    <img
+      class="globe-fallback"
+      src="assets/globe-static.svg"
+      width="420"
+      height="420"
+      alt="Casas de Rust y Podman y un gopher de Go dentro de una bola de nieve."
+    />
+  </div>
+  <div class="globe-caption">
+    <span
+      >RUST <i aria-hidden="true">/</i> PODMAN
+      <i aria-hidden="true">/</i> GO</span
+    >
+    <p id="globe-hint">Un pequeño mundo entre código y nieve.</p>
+  </div>
+  <div class="globe-controls" hidden>
+    <button class="button" id="shake" type="button" disabled>
+      Agitar nieve
+    </button>
+    <button class="button" id="reset-view" type="button" disabled>
+      Vista inicial
+    </button>
+    <button class="button" id="motion" type="button" aria-pressed="false">
+      Pausar movimiento
+    </button>
+  </div>
+  <p class="scene-status" id="scene-status" role="status"></p>
+</section>

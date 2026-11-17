@@ -1,17 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 190" width="850" height="190" role="img" aria-labelledby="title">
-<title id="title">Leonidas — código y curiosidad</title>
-<style>
-@keyframes drift { 50% { transform:translateY(-6px); } }
-.stars { animation:drift 8s ease-in-out infinite; }
-@media(prefers-reduced-motion:reduce) { .stars { animation:none; } }
+<svg fill="none" viewBox="0 0 850 250" width="850" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+
+
+
+
+
+
+
+    <style>
+      .mono { font-family: 'SF Mono', Consolas, 'Fira Code', Menlo, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+      @keyframes pulse-node {
+        0%, 100% { transform: scale(1); opacity: 0.75; }
+        50% { transform: scale(1.3); opacity: 1; }
+      }
+
+      @keyframes drift-strand-1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+
+      @keyframes drift-strand-2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(6px); }
+      }
+
+      .animated-strand-1 { animation: drift-strand-1 6s ease-in-out infinite; }
+      .animated-strand-2 { animation: drift-strand-2 7.5s ease-in-out infinite 1s; }
+      .node { transform-box: fill-box; transform-origin: center; animation: pulse-node 3s ease-in-out infinite; }
+    @media(prefers-reduced-motion:reduce) { * { animation:none !important; } }
 </style>
-<rect width="850" height="190" rx="12" fill="#101923"/>
-<g class="stars" fill="none" stroke="#98d8bd" opacity=".45">
-<path d="M520 156C620 20 680 200 860 40M510 170C640 30 730 180 870 80"/>
-<ellipse cx="701" cy="95" rx="106" ry="35" transform="rotate(-28 701 95)"/>
-</g>
-<g class="stars" fill="#cfb77a"><circle cx="560" cy="42" r="2"/><circle cx="660" cy="150" r="2"/><circle cx="760" cy="50" r="3"/><circle cx="799" cy="140" r="2"/></g>
-<g fill="#98d8bd"><circle cx="590" cy="120" r="3"/><circle cx="715" cy="90" r="4"/><circle cx="812" cy="32" r="2"/></g>
-<text x="40" y="88" font-family="Georgia,serif" font-size="52" fill="#f2efe7">Leonidas.</text>
-<text x="42" y="128" font-family="sans-serif" font-size="19" fill="#afbecb">Código, curiosidad y algo nuevo por aprender.</text>
+  </defs>
+
+
+  <rect width="848" height="248" x="1" y="1" rx="14" fill="#080a10" stroke="#1f2430" stroke-width="1.5"/>
+
+
+  <g class="animated-strand-1" opacity="0.65">
+
+    <path d="M -20,110 C 180,60 340,170 520,100 C 650,50 750,130 870,95" fill="none" stroke="#45ffc0" stroke-width="1.8" stroke-linecap="round"/>
+
+
+    <circle cx="85" cy="94" r="2.2" fill="#45ffc0" class="node"/>
+    <circle cx="195" cy="74" r="3.2" fill="#00f5d4" class="node"/>
+    <circle cx="310" cy="142" r="2" fill="#45ffc0"/>
+    <circle cx="430" cy="138" r="2.8" fill="#00b4d8" class="node"/>
+    <circle cx="560" cy="85" r="3.5" fill="#45ffc0" class="node"/>
+    <circle cx="680" cy="88" r="2.2" fill="#00f5d4"/>
+    <circle cx="790" cy="118" r="3" fill="#45ffc0" class="node"/>
+  </g>
+
+  <g class="animated-strand-2" opacity="0.55">
+
+    <path d="M -20,165 C 160,210 320,115 480,180 C 620,230 730,140 870,175" fill="none" stroke="#ff6b9e" stroke-width="1.6" stroke-linecap="round"/>
+
+
+    <circle cx="65" cy="178" r="2.5" fill="#ff2097" class="node"/>
+    <circle cx="210" cy="188" r="3" fill="#ff6b6b" class="node"/>
+    <circle cx="360" cy="132" r="2.2" fill="#ffbe0b"/>
+    <circle cx="495" cy="185" r="3.4" fill="#ff6b6b" class="node"/>
+    <circle cx="620" cy="215" r="2" fill="#ff2097"/>
+    <circle cx="750" cy="155" r="3.2" fill="#ffbe0b" class="node"/>
+  </g>
+
+
+  <g opacity="0.5">
+    <circle cx="120" cy="35" r="1.2" fill="#ffffff"/>
+    <circle cx="250" cy="45" r="1.5" fill="#45ffc0"/>
+    <circle cx="390" cy="30" r="1" fill="#ffbe0b"/>
+    <circle cx="580" cy="40" r="1.4" fill="#ffffff"/>
+    <circle cx="720" cy="30" r="1.8" fill="#ff2097"/>
+    <circle cx="140" cy="220" r="1.5" fill="#45ffc0"/>
+    <circle cx="290" cy="230" r="1.2" fill="#ffffff"/>
+    <circle cx="450" cy="235" r="1.6" fill="#ff6b6b"/>
+    <circle cx="630" cy="225" r="1.2" fill="#45ffc0"/>
+    <circle cx="780" cy="220" r="1.4" fill="#ffffff"/>
+  </g>
+
+
+  <g transform="translate(40, 26)">
+    <rect width="180" height="22" rx="4" fill="#131722" stroke="#252c3d" stroke-width="1"/>
+    <circle cx="12" cy="11" r="3.5" fill="#45ffc0"/>
+    <text x="24" y="15" class="mono" font-size="10" font-weight="700" fill="#e6edf3" letter-spacing="1">BOLIVIA • +591</text>
+  </g>
+
+  <g transform="translate(630, 26)">
+    <rect width="180" height="22" rx="4" fill="#131722" stroke="#252c3d" stroke-width="1"/>
+    <circle cx="14" cy="11" r="3.5" fill="#5865f2"/>
+    <text x="26" y="15" class="mono" font-size="10" font-weight="700" fill="#c0caf5" letter-spacing="1">@leonidas854</text>
+  </g>
+
+
+  <text x="425" y="95" text-anchor="middle" class="sans" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="-0.5">LEONIDAS</text>
+
+
+  <text x="425" y="125" text-anchor="middle" class="mono" font-size="13" font-weight="600" fill="#7aa2f7" letter-spacing="1.5">DESARROLLO DE SOFTWARE</text>
+
+
+  <text x="425" y="150" text-anchor="middle" class="sans" font-size="13" font-weight="400" fill="#8b949e">
+    C# • Python • Java • Desarrollo web • Aprendiendo Rust
+  </text>
+
+
+  <g transform="translate(70, 182)">
+
+    <rect x="0" y="0" width="52" height="26" rx="5" fill="#141824" stroke="#512bd4" stroke-width="1.2"/>
+    <text x="26" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#ffffff">C#</text>
+
+
+    <rect x="62" y="0" width="70" height="26" rx="5" fill="#141824" stroke="#3776ab" stroke-width="1.2"/>
+    <text x="97" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#ffffff">Python</text>
+
+
+    <rect x="142" y="0" width="60" height="26" rx="5" fill="#141824" stroke="#f89820" stroke-width="1.2"/>
+    <text x="172" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#ffffff">Java</text>
+
+
+    <rect x="212" y="0" width="94" height="26" rx="5" fill="#141824" stroke="#3178c6" stroke-width="1.2"/>
+    <text x="259" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#ffffff">TypeScript</text>
+
+
+    <rect x="316" y="0" width="85" height="26" rx="5" fill="#1e1310" stroke="#ff9e74" stroke-width="1.2"/>
+    <text x="358" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#ff9e74">Rust</text>
+
+
+    <rect x="411" y="0" width="68" height="26" rx="5" fill="#0d1b24" stroke="#00add8" stroke-width="1.2"/>
+    <text x="445" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#00add8">Go</text>
+
+
+    <rect x="489" y="0" width="85" height="26" rx="5" fill="#191224" stroke="#892ca0" stroke-width="1.2"/>
+    <text x="531" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#d28cf5">Podman</text>
+
+
+    <rect x="584" y="0" width="76" height="26" rx="5" fill="#0e1726" stroke="#2496ed" stroke-width="1.2"/>
+    <text x="622" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#2496ed">Docker</text>
+
+
+    <rect x="670" y="0" width="48" height="26" rx="5" fill="#141824" stroke="#45ffc0" stroke-width="1.2"/>
+    <text x="694" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#45ffc0">SQL</text>
+  </g>
 </svg>

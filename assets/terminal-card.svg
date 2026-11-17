@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" width="850" height="240" role="img" aria-labelledby="title">
+<title id="title">Perfil de Leonidas: lenguajes, frameworks y aprendizaje</title>
+<rect x="1" y="1" width="848" height="238" rx="12" fill="#10141e" stroke="#64758f"/>
+<path d="M13 1H837Q849 1 849 13V36H1V13Q1 1 13 1" fill="#181e2b"/>
+<circle cx="23" cy="19" r="5" fill="#ff829b"/><circle cx="41" cy="19" r="5" fill="#e0af68"/><circle cx="59" cy="19" r="5" fill="#45ffc0"/>
+<text x="425" y="23" text-anchor="middle" font-family="monospace" font-size="12" fill="#aab8cb">leonidas@dev ~ / perfil</text>
+<g font-family="monospace" font-size="14">
+<g fill="#8eb7ff"><text x="28" y="70">nombre</text><text x="28" y="101">lenguajes</text><text x="28" y="132">frameworks</text><text x="28" y="163">aprendiendo</text><text x="28" y="194">idiomas</text></g>
+<g fill="#e6edf3"><text x="170" y="70">Thiago Sossa / @leonidas854</text><text x="170" y="101">C# · Python · Java · TypeScript · JS · SQL · HTML · CSS</text><text x="170" y="132">ASP.NET · Spring Boot · Django · FastAPI · React · Next.js</text><text x="170" y="194">Español / English A2</text></g>
+<text x="170" y="163" fill="#ffad85">Rust</text><text x="28" y="222" fill="#45ffc0">❯</text><text x="48" y="222" fill="#aab8cb">Siempre hay algo por aprender.</text>
+</g></svg>

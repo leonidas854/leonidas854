@@ -1,0 +1,10 @@
+{
+  "name": "leonidas854-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build.py && python3 scripts/build-assets.py",
+    "check": "python3 scripts/check.py",
+    "start": "python3 -m http.server 8765 --bind 127.0.0.1"
+  }
+}

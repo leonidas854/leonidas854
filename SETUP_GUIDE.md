@@ -1,58 +1,66 @@
-# Mantener y reutilizar este perfil
+# Editar el perfil por componentes
 
-El perfil pertenece a [leonidas854](https://github.com/leonidas854) y su repositorio público es [leonidas854/leonidas854](https://github.com/leonidas854/leonidas854).
+Perfil: [leonidas854](https://github.com/leonidas854). Página: [Código, galaxia y nieve](https://leonidas854.github.io/leonidas854/).
 
-## Qué editar
+## Estructura
 
-| Archivo | Contenido |
+| Qué quieres cambiar | Dónde editar |
 | --- | --- |
-| `README.md` / `README.en.md` | Presentación, tecnologías, nivel de experiencia y contactos |
-| `index.html` | Contenido de la página interactiva |
-| `assets/profile.css` | Colores, diseño y adaptación a móvil |
-| `assets/universe.js` | Galaxia, interacción y controles de movimiento |
-| `assets/globe-scene.svg` | Ilustración original editable de la bola de nieve |
-| `assets/snow-globe.svg` | Ilustración con texto para el README |
-| `assets/header-banner.svg` | Cabecera del perfil |
-| `CREDITS.md` | Atribuciones y condiciones de los recursos |
+| Orden de las secciones y metadatos | `src/page.html` |
+| Navegación superior | `src/components/navigation/` |
+| Nombre, presentación y terminal | `src/components/profile/` |
+| Listas de lenguajes y frameworks | `src/components/technologies/` |
+| Enlaces de contacto | `src/components/contact/` |
+| Fondo de partículas | `src/components/galaxy/` |
+| Esfera, casas, personajes y nieve | `src/components/snow-globe/` |
+| Paleta, tipografía y controles comunes | `src/styles/base.css` |
+| Pausa, movimiento reducido y visibilidad | `src/shared/motion.js` |
+| Conexión entre los componentes | `src/app.js` |
+| Secciones del perfil de GitHub | `src/readme/es/` y `src/readme/en/` |
+| Cabecera e ilustración del README | `assets/header-banner.svg`, `assets/snow-globe.svg` |
 
-Tras cambiar la bola de nieve, ejecuta `python3 scripts/build-assets.py` para actualizar sus variantes de pausa y nevada. Si modificas su dibujo, actualiza también la ilustración del README.
+Cada componente de contenido tiene su HTML y CSS. Las escenas separan la creación de objetos, la física, el dibujo y los controles. Consulta [las referencias](docs/REFERENCES.md) para ver qué parte del HTML/CSS original se adaptó en cada módulo y [la dirección visual](DESIGN.md) para conservar el estilo aprobado.
 
-La escena del README usa SVG con animación CSS interna y alternativa estática si el visor no la reproduce. El dibujo sigue visible con movimiento reducido. GitHub no ejecuta el JavaScript ni los estilos HTML de una página dentro de un README; la interacción está en GitHub Pages. [Referencia de GitHub](https://github.com/github/markup).
+`index.html`, `README.md` y `README.en.md` son **salidas generadas**. Se guardan en el repositorio para que GitHub pueda servirlos directamente, pero se editan desde `src/`.
 
-## Probar localmente
+## Flujo de trabajo
 
-Requisitos: Python 3; Node.js solo para comprobar la sintaxis de JavaScript. No se necesita instalar paquetes ni configurar claves.
+Requisitos: Python 3.9 o posterior y Node.js 22 o posterior para las comprobaciones. No hace falta instalar paquetes para construir o ejecutar la página.
 
 ```sh
+python3 scripts/build.py
+python3 scripts/build-assets.py
 python3 scripts/check.py
-node --check assets/universe.js
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Abre [la vista local](http://localhost:8765) y comprueba los enlaces, «Agitar la nieve» y «Pausar animación». La página respeta el tema del sistema, el movimiento reducido y los colores forzados. Pausa el movimiento al ocultar la pestaña o salir la escena de la pantalla. El perfil, sus enlaces y el dibujo siguen disponibles sin JavaScript.
+Abre [la vista local](http://localhost:8765). Tras editar un componente, vuelve a ejecutar `python3 scripts/build.py` y recarga. Para cambios solo en CSS o JavaScript basta recargar el navegador.
 
-## Publicar en GitHub Pages
+Three.js y OrbitControls **0.170.0** están en `src/vendor/three/`, con su licencia. Los logos y bandas de iconos también se sirven localmente. No se usan CDN, API meteorológica, analítica ni claves en tiempo de ejecución.
 
-La fuente de publicación es **main / (root)**. El archivo `.nojekyll` permite servir HTML, CSS, JS y SVG tal como están. Cada push a `main` actualiza el perfil y vuelve a publicar la página cuando Pages está activado.
+## Comprobar las escenas
 
-Para activar o verificar esa configuración: repositorio → **Settings → Pages → Deploy from a branch → main → /(root)**. El enlace esperado es [leonidas854.github.io/leonidas854](https://leonidas854.github.io/leonidas854/). La publicación puede tardar unos minutos; comprueba el resultado en Actions. [Documentación oficial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- Arrastra la esfera con el ratón para verla desde otros ángulos.
+- Con foco en la esfera, las flechas giran la cámara e Inicio restablece la vista.
+- «Agitar nieve» activa la circulación de partículas dentro del cristal.
+- «Pausar movimiento» detiene galaxia, nieve y movimiento automático de la esfera; el giro manual sigue disponible.
+- Movimiento reducido y colores forzados detienen el movimiento automático. La escena también se detiene al ocultar la pestaña o salir la cabecera de pantalla.
+- Sin JavaScript se mantiene el contenido completo. Sin WebGL se muestra la ilustración y se deshabilitan los controles exclusivos de 3D.
 
-## Usarlo en otra cuenta
+El tema es nocturno, como las referencias originales. Con colores forzados se usan los colores de alto contraste del sistema.
 
-1. Crea un repositorio **público con el mismo nombre que tu usuario** y coloca `README.md` en la raíz. [Requisitos del perfil](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
-2. Sustituye `leonidas854`, el nombre, el correo, Telegram y Discord en ambos README y en `index.html`. Ajusta también los SVG y esta guía.
-3. Actualiza los niveles de experiencia con tus datos y conserva los créditos que correspondan.
-4. Activa Pages si quieres la página interactiva y cambia sus enlaces por los de tu cuenta.
-5. Ejecuta las comprobaciones antes de publicar.
+## README y GitHub Pages
 
-## Animación de contribuciones
+El README usa Markdown e imágenes SVG animadas. La esfera 3D y el lienzo de partículas pertenecen a la página enlazada: GitHub no ejecuta JavaScript de una página dentro del README. [Referencia de GitHub](https://github.com/github/markup).
 
-Se conserva el workflow existente `Generate Contribution Snake`, que actualiza la rama `output` a diario a las 00:00 UTC (20:00 del día anterior en Bolivia), al publicar en `main` o manualmente desde Actions. La sección «Mi actividad en GitHub» del README usa esas imágenes. En una copia nueva, ejecuta el workflow una vez para generarlas. Si no quieres esta función, elimina esa sección y su workflow.
+Pages publica desde **main / (root)**. Después de generar y comprobar los archivos, un push a `main` actualiza el perfil y la página. `.nojekyll` permite servir los archivos estáticos directamente.
 
-`Check profile` verifica los archivos en cada push y pull request. Solo necesita permisos de lectura. La serpiente necesita `contents: write` para actualizar exclusivamente su rama de salida.
+`Check profile` verifica enlaces locales, imágenes, módulos y sintaxis; también reconstruye las salidas para detectar cambios no generados. El workflow existente `Generate Contribution Snake` mantiene la animación en la rama `output` a las 00:00 UTC y al publicar. Se puede ejecutar manualmente desde Actions.
 
-## Recursos y privacidad
+## Reutilizarlo
 
-Los recursos de la página son locales. Los contactos son enlaces, sin formularios ni analítica. El enlace telefónico de Telegram depende de la configuración de descubrimiento de tu cuenta; si no abre tu conversación, reemplázalo por tu alias público `t.me/usuario`. Discord depende de la vigencia de la invitación.
+Crea un repositorio público cuyo nombre coincida con tu usuario. Sustituye `leonidas854`, el nombre, correo, Telegram y Discord en los componentes y en ambos idiomas. Cambia los textos de los SVG cuando corresponda, genera las salidas y activa Pages. Conserva los créditos de los recursos utilizados.
 
-Código original bajo MIT. Consulta `CREDITS.md` para los recursos y marcas de terceros. No se incluyen proyectos destacados por decisión del autor.
+Telegram usa el número proporcionado y depende de la configuración de descubrimiento de la cuenta. Puedes cambiarlo por un alias público. Discord depende de la vigencia de su invitación.
+
+Código original bajo [MIT](LICENSE), recursos de terceros según [CREDITS.md](CREDITS.md). No se incluyen proyectos destacados por decisión del autor.

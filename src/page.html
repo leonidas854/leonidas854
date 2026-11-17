@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Leonidas: C#, Python, Java, desarrollo web y Rust en aprendizaje. Un perfil entre partículas, código y nieve."
+    />
+    <meta name="theme-color" content="#080a10" />
+    <title>Leonidas | Código, galaxia y nieve</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/components/navigation/navigation.css" />
+    <link rel="stylesheet" href="src/components/profile/profile.css" />
+    <link rel="stylesheet" href="src/components/galaxy/galaxy.css" />
+    <link rel="stylesheet" href="src/components/snow-globe/snow-globe.css" />
+    <link
+      rel="stylesheet"
+      href="src/components/technologies/technologies.css"
+    />
+    <link rel="stylesheet" href="src/components/contact/contact.css" />
+    <script type="module" src="src/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#perfil">Saltar al contenido</a>
+    <div class="universe" aria-hidden="true">
+      <canvas id="particles"></canvas>
+      <div class="cosmic-dust"></div>
+    </div>
+    <!-- include: components/navigation/navigation.html -->
+    <main>
+      <div class="hero wrap" id="inicio">
+        <!-- include: components/profile/profile.html -->
+        <!-- include: components/snow-globe/snow-globe.html -->
+      </div>
+      <!-- include: components/technologies/technologies.html -->
+      <!-- include: components/contact/contact.html -->
+    </main>
+    <footer class="wrap site-footer">
+      <span>LEONIDAS / @leonidas854</span
+      ><a href="https://github.com/leonidas854/leonidas854"
+        >Código del perfil ↗</a
+      >
+    </footer>
+  </body>
+</html>

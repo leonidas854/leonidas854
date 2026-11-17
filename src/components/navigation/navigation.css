@@ -1,0 +1,36 @@
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 24px;
+}
+.wordmark {
+  font: 700 14px var(--mono);
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  background: var(--background);
+  padding: 6px 0;
+}
+.wordmark span {
+  color: var(--mint);
+}
+.site-header nav {
+  display: flex;
+  gap: 26px;
+  background: var(--background);
+  font: 12px var(--mono);
+}
+.site-header nav a {
+  padding-block: 12px;
+}
+@media (max-width: 600px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .site-header nav {
+    gap: 24px;
+  }
+}

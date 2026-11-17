@@ -1,0 +1,90 @@
+.snow-globe {
+  position: relative;
+  min-width: 0;
+  text-align: center;
+}
+.globe-stage {
+  position: relative;
+  height: 510px;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.globe-stage:active {
+  cursor: grabbing;
+}
+.globe-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y !important;
+}
+.globe-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.globe-stage[data-ready="true"] .globe-fallback {
+  display: none;
+}
+.globe-stage:not([data-ready="true"]) {
+  cursor: default;
+}
+.globe-caption {
+  display: table;
+  margin: 0 auto;
+  background: var(--background);
+  padding: 5px 12px;
+}
+.globe-caption > span {
+  font: 600 12px var(--mono);
+  letter-spacing: 0.15em;
+  color: var(--mint);
+}
+.globe-caption i {
+  font-style: normal;
+  color: var(--muted);
+  margin-inline: 12px;
+}
+.globe-caption p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+.globe-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+[hidden] {
+  display: none !important;
+}
+.scene-status {
+  color: var(--muted);
+  font: 11px var(--mono);
+  min-height: 18px;
+  margin-top: 10px;
+}
+.scene-status:not(:empty) {
+  display: table;
+  background: var(--background);
+  margin-inline: auto;
+  padding: 3px 8px;
+}
+@media (max-width: 850px) {
+  .globe-stage {
+    height: 450px;
+  }
+}
+@media (max-width: 440px) {
+  .globe-stage {
+    height: 350px;
+  }
+  .globe-controls .button {
+    padding-inline: 10px;
+    font-size: 11px;
+  }
+}

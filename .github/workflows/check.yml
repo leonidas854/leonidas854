@@ -11,11 +11,10 @@ jobs:
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
-      - name: Check local links and SVG files
+      - name: Check local links, SVG files and JavaScript modules
         run: python3 scripts/check.py
-      - name: Check JavaScript syntax
-        run: node --check assets/universe.js
-      - name: Check generated illustrations
+      - name: Check generated HTML, READMEs and illustrations
         run: |
+          python3 scripts/build.py
           python3 scripts/build-assets.py
-          git diff --exit-code -- assets/
+          git diff --exit-code -- index.html README.md README.en.md assets/
