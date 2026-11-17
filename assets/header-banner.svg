@@ -1,0 +1,165 @@
+<svg fill="none" viewBox="0 0 850 250" width="850" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161e"/>
+      <stop offset="50%" stop-color="#1a1b26"/>
+      <stop offset="100%" stop-color="#1f2335"/>
+    </linearGradient>
+
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7"/>
+      <stop offset="50%" stop-color="#bb9af7"/>
+      <stop offset="100%" stop-color="#7dcfff"/>
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dcfff"/>
+      <stop offset="100%" stop-color="#2ac3de"/>
+    </linearGradient>
+
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#414868"/>
+      <stop offset="50%" stop-color="#7aa2f7"/>
+      <stop offset="100%" stop-color="#24283b"/>
+    </linearGradient>
+
+    <radialGradient id="glow-left" cx="0%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-right" cx="100%" cy="100%" r="70%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#24283b" stroke-width="0.8" stroke-opacity="0.5"/>
+    </pattern>
+
+    <style>
+      .mono { font-family: 'SF Mono', Consolas, 'Fira Code', Menlo, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      
+      .title-text {
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        fill: url(#title-grad);
+      }
+      
+      .sub-text {
+        font-size: 14px;
+        font-weight: 400;
+        fill: #a9b1d6;
+        letter-spacing: 0.3px;
+      }
+      
+      .badge-text {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        fill: #7dcfff;
+      }
+
+      .chip-text {
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.8; }
+      }
+
+      @keyframes floatUpDown {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+
+      .floating-1 { animation: floatUpDown 4s ease-in-out infinite; }
+      .floating-2 { animation: floatUpDown 5s ease-in-out infinite 1s; }
+      .pulsing-dot { animation: pulse 2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="848" height="248" x="1" y="1" rx="16" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5"/>
+
+  <!-- Subtle Tech Grid -->
+  <rect width="846" height="246" x="2" y="2" rx="15" fill="url(#grid)" />
+
+  <!-- Ambient Glows -->
+  <circle cx="80" cy="50" r="140" fill="url(#glow-left)"/>
+  <circle cx="770" cy="200" r="160" fill="url(#glow-right)"/>
+
+  <!-- Top Decorative Badge: SYSTEM ONLINE -->
+  <g transform="translate(345, 28)">
+    <rect width="160" height="24" rx="12" fill="#1f2335" stroke="#7aa2f7" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="16" cy="12" r="4" fill="#73daca" class="pulsing-dot"/>
+    <text x="30" y="15.5" class="mono badge-text">SYSTEM ONLINE</text>
+  </g>
+
+  <!-- Floating Tech Chip 1: ASP.NET & Spring -->
+  <g transform="translate(45, 36)" class="floating-1">
+    <rect width="136" height="28" rx="14" fill="#1f2335" stroke="#7aa2f7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="68" y="18" text-anchor="middle" class="mono chip-text" fill="#7aa2f7">&lt;/&gt; ASP.NET &amp; Spring</text>
+  </g>
+
+  <!-- Floating Tech Chip 2: Full-Stack Dev -->
+  <g transform="translate(45, 185)" class="floating-2">
+    <rect width="130" height="28" rx="14" fill="#1f2335" stroke="#f7768e" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="65" y="18" text-anchor="middle" class="mono chip-text" fill="#f7768e">⚡ Full Stack Dev</text>
+  </g>
+
+  <!-- Floating Tech Chip 3: Rust Explorer -->
+  <g transform="translate(670, 36)" class="floating-2">
+    <rect width="135" height="28" rx="14" fill="#1f2335" stroke="#e0af68" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="67" y="18" text-anchor="middle" class="mono chip-text" fill="#e0af68">🦀 Learning Rust</text>
+  </g>
+
+  <!-- Floating Tech Chip 4: React & Next.js -->
+  <g transform="translate(670, 185)" class="floating-1">
+    <rect width="135" height="28" rx="14" fill="#1f2335" stroke="#9ece6a" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="67" y="18" text-anchor="middle" class="mono chip-text" fill="#9ece6a">🚀 Next.js &amp; React</text>
+  </g>
+
+  <!-- Main Hero Title & Content -->
+  <!-- Main Title -->
+  <text x="425" y="105" text-anchor="middle" class="sans title-text">Full Stack Developer &amp; Software Engineer</text>
+
+  <!-- Subtitle -->
+  <text x="425" y="135" text-anchor="middle" class="sans sub-text">Turning complex ideas into scalable, clean and robust software</text>
+
+  <!-- Tech tags bar in center -->
+  <g transform="translate(195, 160)">
+    <!-- Tag 1: C# -->
+    <rect x="0" y="0" width="45" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
+    <text x="22.5" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">C#</text>
+
+    <!-- Tag 2: Python -->
+    <rect x="52" y="0" width="62" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
+    <text x="83" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">Python</text>
+
+    <!-- Tag 3: Java -->
+    <rect x="121" y="0" width="52" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
+    <text x="147" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">Java</text>
+
+    <!-- Tag 4: TypeScript -->
+    <rect x="180" y="0" width="88" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
+    <text x="224" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">TypeScript</text>
+
+    <!-- Tag 5: SQL -->
+    <rect x="275" y="0" width="50" height="22" rx="6" fill="#24283b" stroke="#414868" stroke-width="0.8"/>
+    <text x="300" y="15" text-anchor="middle" class="mono chip-text" fill="#c0caf5">SQL</text>
+
+    <!-- Tag 6: Rust Explorer (Special Highlight) -->
+    <rect x="332" y="0" width="128" height="22" rx="6" fill="#292e42" stroke="#e0af68" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="396" y="15" text-anchor="middle" class="mono chip-text" fill="#e0af68">🦀 Rust Explorer</text>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <line x1="280" y1="210" x2="570" y2="210" stroke="url(#title-grad)" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
+</svg>

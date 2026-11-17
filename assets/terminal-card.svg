@@ -1,0 +1,140 @@
+<svg fill="none" viewBox="0 0 850 340" width="850" height="340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="term-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161e"/>
+      <stop offset="100%" stop-color="#1a1b26"/>
+    </linearGradient>
+
+    <linearGradient id="term-header" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f2335"/>
+      <stop offset="100%" stop-color="#24283b"/>
+    </linearGradient>
+
+    <style>
+      .term-text { font-family: 'SF Mono', Consolas, 'Fira Code', Menlo, monospace; font-size: 13px; }
+      .term-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; fill: #7aa2f7; }
+      .key { fill: #7dcfff; font-weight: 600; }
+      .colon { fill: #565f89; }
+      .val { fill: #c0caf5; }
+      .val-hl { fill: #bb9af7; font-weight: 600; }
+      .val-rust { fill: #e0af68; font-weight: 700; }
+      .val-green { fill: #9ece6a; }
+      .val-cyan { fill: #73daca; }
+      .val-red { fill: #f7768e; }
+      
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .cursor { animation: blink 1s infinite; fill: #7aa2f7; }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect width="848" height="338" x="1" y="1" rx="14" fill="url(#term-bg)" stroke="#2f354a" stroke-width="1.5"/>
+
+  <!-- Window Header Bar -->
+  <path d="M 1 15 C 1 7.268 7.268 1 15 1 L 835 1 C 842.732 1 849 7.268 849 15 L 849 38 L 1 38 Z" fill="url(#term-header)"/>
+  <line x1="1" y1="38" x2="849" y2="38" stroke="#24283b" stroke-width="1"/>
+
+  <!-- Window Buttons (macOS style) -->
+  <circle cx="22" cy="19" r="6" fill="#f7768e"/>
+  <circle cx="42" cy="19" r="6" fill="#e0af68"/>
+  <circle cx="62" cy="19" r="6" fill="#9ece6a"/>
+
+  <!-- Window Title -->
+  <text x="425" y="23" text-anchor="middle" class="term-title">developer@portfolio:~ (neofetch)</text>
+
+  <!-- Terminal Content -->
+  <!-- Left Side: Stylized ASCII Tech Glyph -->
+  <g transform="translate(35, 70)" class="term-text">
+    <text x="0" y="20" fill="#7aa2f7">   ______</text>
+    <text x="0" y="40" fill="#7aa2f7">  / ____/____  ___  ____</text>
+    <text x="0" y="60" fill="#7dcfff"> / /_   / __ \/ _ \/ __ \</text>
+    <text x="0" y="80" fill="#7dcfff">/ __/  / /_/ /  __/ / / /</text>
+    <text x="0" y="100" fill="#bb9af7">/_/    \____/\___/_/ /_/</text>
+    <text x="0" y="125" fill="#bb9af7">========================</text>
+    <text x="0" y="145" fill="#565f89">  SYSTEM ARCHITECTURE</text>
+    <text x="0" y="165" fill="#7aa2f7">  &gt; Web &amp; Distributed</text>
+    <text x="0" y="185" fill="#9ece6a">  &gt; High Performance</text>
+    <text x="0" y="205" fill="#e0af68">  &gt; Polyglot Developer</text>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="285" y1="55" x2="285" y2="310" stroke="#24283b" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Right Side: Neofetch Specs -->
+  <g transform="translate(305, 55)" class="term-text">
+    <!-- Line 1: User / Role -->
+    <text x="0" y="25">
+      <tspan class="key">User</tspan><tspan class="colon">: </tspan>
+      <tspan class="val-hl">Leonidas </tspan>
+      <tspan class="val">(Full Stack Developer &amp; Software Engineer)</tspan>
+    </text>
+
+    <!-- Line 2: OS / Environment -->
+    <text x="0" y="48">
+      <tspan class="key">Environment</tspan><tspan class="colon">: </tspan>
+      <tspan class="val">Linux / Cloud &amp; Distributed Environments</tspan>
+    </text>
+
+    <!-- Line 3: Core Languages -->
+    <text x="0" y="71">
+      <tspan class="key">Core Languages</tspan><tspan class="colon">: </tspan>
+      <tspan class="val">C#, Python, Java, TypeScript, JavaScript, SQL, HTML5/CSS3</tspan>
+    </text>
+
+    <!-- Line 4: Frameworks -->
+    <text x="0" y="94">
+      <tspan class="key">Frameworks</tspan><tspan class="colon">: </tspan>
+      <tspan class="val">ASP.NET Core, Spring Boot, Next.js, OpenNext, React, Django, FastAPI, Laravel</tspan>
+    </text>
+
+    <!-- Line 5: Active Learning -->
+    <text x="0" y="117">
+      <tspan class="key">Currently Learning</tspan><tspan class="colon">: </tspan>
+      <tspan class="val-rust">🦀 Rust </tspan>
+      <tspan class="val">(Memory safety, concurrency, systems programming)</tspan>
+    </text>
+
+    <!-- Line 6: Secondary / Expanding -->
+    <text x="0" y="140">
+      <tspan class="key">Also Familiar With</tspan><tspan class="colon">: </tspan>
+      <tspan class="val">Golang, C++, PHP, Dart / Flutter</tspan>
+    </text>
+
+    <!-- Line 7: Spoken Languages -->
+    <text x="0" y="163">
+      <tspan class="key">Languages Spoken</tspan><tspan class="colon">: </tspan>
+      <tspan class="val-green">Spanish (Native) </tspan>
+      <tspan class="val">| </tspan>
+      <tspan class="val-cyan">English (A2 - Actively improving daily)</tspan>
+    </text>
+
+    <!-- Line 8: Focus -->
+    <text x="0" y="186">
+      <tspan class="key">Current Focus</tspan><tspan class="colon">: </tspan>
+      <tspan class="val">Scalable Microservices, Modern Full-Stack &amp; Robust APIs</tspan>
+    </text>
+
+    <!-- Line 9: Color Palette Blocks (Classic Neofetch feature) -->
+    <g transform="translate(0, 208)">
+      <rect x="0" y="0" width="22" height="13" rx="3" fill="#15161e"/>
+      <rect x="28" y="0" width="22" height="13" rx="3" fill="#f7768e"/>
+      <rect x="56" y="0" width="22" height="13" rx="3" fill="#9ece6a"/>
+      <rect x="84" y="0" width="22" height="13" rx="3" fill="#e0af68"/>
+      <rect x="112" y="0" width="22" height="13" rx="3" fill="#7aa2f7"/>
+      <rect x="140" y="0" width="22" height="13" rx="3" fill="#bb9af7"/>
+      <rect x="168" y="0" width="22" height="13" rx="3" fill="#7dcfff"/>
+      <rect x="196" y="0" width="22" height="13" rx="3" fill="#a9b1d6"/>
+    </g>
+
+    <!-- Terminal Command & Cursor -->
+    <text x="0" y="246">
+      <tspan fill="#9ece6a">➜ </tspan>
+      <tspan fill="#7dcfff">~ </tspan>
+      <tspan fill="#c0caf5">build-future --with-passion --status=active</tspan>
+      <tspan class="cursor"> █</tspan>
+    </text>
+  </g>
+</svg>
